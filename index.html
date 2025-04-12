@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.F Luzia & Fernanda Saboreando Sonhos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        h2 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .produto {
+            background-color: #f4f4f4;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .produto img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .preco {
+            font-size: 18px;
+            color: red;
+            margin: 10px 0;
+        }
+        .ingredientes {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .combos {
+            margin-top: 30px;
+        }
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>L.F Luzia & Fernanda Saboreando Sonhos</h1>
+    <h2>Sabor que você merece!</h2>
+</header>
+
+<div class="container">
+    <div class="produto">
+        <img src="https://via.placeholder.com/200" alt="Cachorro Quente">
+        <h3>Cachorro Quente</h3>
+        <p class="preco">R$ 6,00</p>
+        <button class="button" onclick="toggleIngredientes('cachorro')">Ver Ingredientes</button>
+        <div class="ingredientes" id="cachorro">
+            Pão, Salsicha, Frango, Carne Moída, Milho, Ervilha e Batata Palha.
+        </div>
+    </div>
+    <div class="produto">
+        <img src="https://via.placeholder.com/200" alt="Bauru">
+        <h3>Bauru</h3>
+        <p class="preco">R$ 8,00</p>
+        <button class="button" onclick="toggleIngredientes('bauru')">Ver Ingredientes</button>
+        <div class="ingredientes" id="bauru">
+            Pão, Hambúrguer, Ovo, Queijo, Presunto, Tomate e Alface.
+        </div>
+    </div>
+    <div class="produto">
+        <img src="https://via.placeholder.com/200" alt="Batata Frita">
+        <h3>Batata Frita</h3>
+        <p class="preco">R$ 10,00</p>
+        <button class="button" onclick="toggleIngredientes('batata')">Ver Ingredientes</button>
+        <div class="ingredientes" id="batata">
+            Batata Frita.
+        </div>
+    </div>
+</div>
+
+<div class="combos">
+    <h2>Combos Especiais</h2>
+    <div class="produto">
+        <h3>Combo 3 Cachorros-Quentes</h3>
+        <p class="preco">R$ 15,00</p>
+    </div>
+    <div class="produto">
+        <h3>Combo 3 Baurus + Batata Frita + Refrigerante 1L</h3>
+        <p class="preco">R$ 45,00</p>
+    </div>
+    <div class="produto">
+        <h3>Combo 1 Bauru + 1 Cachorro Quente + Refrigerante 250ml</h3>
+        <p class="preco">R$ 18,00</p>
+    </div>
+</div>
+
+<footer>
+    <p>Pedidos pelo WhatsApp: <a href="https://wa.me/5584998477906" target="_blank" style="color: white;">84 99847-7906</a></p>
+</footer>
+
+<script>
+    function toggleIngredientes(produto) {
+        var ingredientes = document.getElementById(produto);
+        if (ingredientes.style.display === "none" || ingredientes.style.display === "") {
+            ingredientes.style.display = "block";
+        } else {
+            ingredientes.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
